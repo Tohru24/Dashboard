@@ -1,0 +1,36 @@
+{% include 'layout_distribuidor.html' %}
+
+<div class="grid-container">
+    {% for dia in dias %}
+    <div class="grid-item">
+      <div>
+        <table>
+            <thead>
+            <div>
+                {{dia.dia}}
+            </div>
+              <tr>
+                <th>Producto</th>
+                <th>Categoria</th>
+                <th>Cantidad</th>
+              </tr>
+            </thead>
+            <tbody>
+            {% for disp in disponibilidad%}
+            {% if disp.dia_de_disponibilidad == dia.dia%}
+              <tr>
+                <td>{{disp.producto}}</td>
+                <td>{{disp.categoria}}</td>
+                <td>{{disp.cantidad}}</td>
+              </tr>
+            {% endif %}
+            {% endfor %}
+            </tbody>
+        </table>
+      </div>
+    </div>
+    {% endfor %}
+</div>
+
+
+

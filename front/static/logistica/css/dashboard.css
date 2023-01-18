@@ -1,0 +1,31 @@
+.grid-container {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-gap: 10px;
+          padding: 30px 30px 30px;
+        }
+        .grid-item {
+          display: grid;
+          width:40%;
+          grid-template-columns: 1fr 1fr;
+          grid-gap: 10px;
+          background-color: #f1f1f1;
+          border-radius: 20px;
+          text-align: center;
+          padding: 30px 30px 30px;
+        }
+        table {
+            width: 100%; /* Ancho de la tabla */
+            border-collapse: collapse; /* Elimina los bordes entre las celdas */
+            padding: 30px 30px 30px;
+        }
+
+        th, td {
+            padding: 8px; /* Espacio entre el contenido y los bordes de las celdas */
+            text-align: left; /* Alineación del texto en las celdas */
+            border: 1px solid #ccc; /* Borde de las celdas */
+        }
+
+        th {
+            font-weight: bold; /* Negrita en el texto de las celdas de encabezado */
+        }

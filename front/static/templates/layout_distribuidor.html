@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='/logistica/css/layouts.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='/logistica/css/dashboard.css') }}">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bx-leaf icon'></i>
+        <div class="logo_name">Mr Specialties</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+        <a href="#">
+          <i class='bx bx-grid-alt'></i>
+          <span class="links_name">Disponibilidades</span>
+        </a>
+         <span class="tooltip">Disponibilidades</span>
+      </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-cog' ></i>
+         <span class="links_name">Setting</span>
+       </a>
+       <span class="tooltip">Setting</span>
+     </li>
+     <li class="profile">
+         <div class="profile-details">
+           <!--<img src="profile.jpg" alt="profileImg">-->
+           <div class="name_job">
+             <div class="name">{{user.username}}</div>
+             <div class="job">{{user.role}}</div>
+           </div>
+         </div>
+         <i class='bx bx-log-out' id="log_out" onclick="location.href='/auth/logout'" ></i>
+     </li>
+    </ul>
+  </div>
+  {% block content %}
+
+  {% endblock %}
+
+<script src="{{ url_for('static', path='/logistica/js/layout.js') }}"></script>
+</body>
+</html>
